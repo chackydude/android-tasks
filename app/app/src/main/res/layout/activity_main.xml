@@ -61,7 +61,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="325dp" />
+        app:layout_constraintGuide_begin="340dp" />
 
     <ImageButton
         android:id="@+id/imageButton3"
@@ -114,7 +114,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="396dp" />
+        app:layout_constraintGuide_begin="400dp" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guidelineMain"
@@ -131,7 +131,8 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/guidelineMain"
         app:layout_constraintTop_toTopOf="@+id/guidelineInfo"
-        app:srcCompat="@drawable/house_24" />
+        app:srcCompat="@drawable/house_24"
+        android:layout_marginTop="10dp"/>
 
     <TextView
         android:id="@+id/field"
@@ -141,7 +142,19 @@
         android:text="Some field text"
         android:textSize="17sp"
         app:layout_constraintStart_toEndOf="@+id/fieldIcon"
-        app:layout_constraintTop_toTopOf="@+id/guidelineInfo" />
+        app:layout_constraintTop_toTopOf="@+id/guidelineInfo"
+        android:layout_marginTop="10dp"/>
+
+    <EditText
+        android:id="@+id/editField"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:ems="7"
+        app:layout_constraintStart_toEndOf="@+id/fieldIcon"
+        app:layout_constraintTop_toTopOf="@+id/guidelineInfo"
+        tools:ignore="MissingConstraints"
+        android:visibility="gone"/>
 
     <ImageView
         android:id="@+id/fieldIcon2"
@@ -192,13 +205,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="500dp" />
+        app:layout_constraintGuide_begin="529dp" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/editButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="15dp"
         android:text="Edit information"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.33"
