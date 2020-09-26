@@ -1,9 +1,11 @@
 package com.example.testapplication
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -26,6 +28,11 @@ class MainActivity : AppCompatActivity() {
                 editField.visibility = View.GONE
                 editButton.setText("Edit information");
             }
+        }
+
+        button_back_registration.setOnClickListener {
+            val intent = Intent(this, RegistrationActivity::class.java)
+            startActivity(intent)
         }
     }
 }
