@@ -130,11 +130,11 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/guidelineMain"
         app:layout_constraintTop_toTopOf="@+id/guidelineInfo"
-        app:srcCompat="@drawable/house_24"
+        app:srcCompat="@drawable/university_24"
         android:layout_marginTop="10dp"/>
 
     <TextView
-        android:id="@+id/field"
+        android:id="@+id/university"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="12dp"
@@ -167,7 +167,7 @@
         app:srcCompat="@drawable/relations_24" />
 
     <TextView
-        android:id="@+id/field2"
+        android:id="@+id/relations"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="12dp"
@@ -175,7 +175,7 @@
         android:textSize="17sp"
         android:layout_marginTop="40dp"
         app:layout_constraintStart_toEndOf="@+id/fieldIcon2"
-        app:layout_constraintTop_toTopOf="@+id/field" />
+        app:layout_constraintTop_toTopOf="@+id/university" />
 
     <ImageView
         android:id="@+id/fieldIcon3"
@@ -186,10 +186,10 @@
         app:layout_constraintStart_toStartOf="@+id/guidelineMain"
         app:layout_constraintTop_toTopOf="@+id/fieldIcon2"
         android:layout_marginTop="40dp"
-        app:srcCompat="@drawable/university_24" />
+        app:srcCompat="@drawable/house_24" />
 
     <TextView
-        android:id="@+id/field3"
+        android:id="@+id/city"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="12dp"
@@ -197,7 +197,7 @@
         android:textSize="17sp"
         android:layout_marginTop="40dp"
         app:layout_constraintStart_toEndOf="@+id/fieldIcon3"
-        app:layout_constraintTop_toTopOf="@+id/field2" />
+        app:layout_constraintTop_toTopOf="@+id/relations" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guidelineInfoEnd"
@@ -210,10 +210,10 @@
         android:id="@+id/editButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="12dp"
         android:text="Edit information"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.33"
+        app:layout_constraintHorizontal_bias="0.344"
         app:layout_constraintStart_toStartOf="@+id/guidelineMain"
         app:layout_constraintTop_toTopOf="@+id/guidelineInfoEnd" />
 

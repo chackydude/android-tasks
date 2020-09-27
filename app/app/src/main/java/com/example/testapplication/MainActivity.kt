@@ -13,18 +13,26 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        val userName = getIntent().getExtras()?.getString("userName");
+        val userSoname = getIntent().getExtras()?.getString("userSoname");
+        val userUniversity = getIntent().getExtras()?.getString("userUniversity");
+
+        name.text = userName;
+        soname.text = userSoname;
+        university.text = userUniversity;
+
         editButton.setOnClickListener {
-            if (field.visibility == View.VISIBLE) {
-                field.visibility = View.INVISIBLE
+            if (university.visibility == View.VISIBLE) {
+                university.visibility = View.INVISIBLE
                 editField.visibility = View.VISIBLE
                 editButton.setText("Save information");
             } else {
                 var editFieldText: String = editField.getText().toString()
                 if (editFieldText == "") {
-                    editFieldText = "Some field text"
+                    editFieldText = university.text.toString();
                 }
-                field.setText(editFieldText)
-                field.visibility = View.VISIBLE
+                university.setText(editFieldText)
+                university.visibility = View.VISIBLE
                 editField.visibility = View.GONE
                 editButton.setText("Edit information");
             }
