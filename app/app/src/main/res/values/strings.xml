@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">TestApplication</string>
+    <string name="name">Name</string>
+    <string name="soname">Soname</string>
 </resources>
