@@ -10,32 +10,27 @@ import kotlinx.android.synthetic.main.activity_intest_task_first.*
 
 
 class IntentTaskFirst : AppCompatActivity() {
+    private val KEY = "KEY"
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_intest_task_first)
 
         intentButton.setOnClickListener {
-            val intent = Intent()
             val text = "Hello Intent"
-            intent.setAction(Intent.ACTION_SEND)
+            var intent = Intent(Intent.ACTION_SEND)
+            intent.addCategory(Intent.CATEGORY_DEFAULT)
             intent.putExtra(Intent.EXTRA_TEXT, text)
-            intent.setType("text/plain")
-
             if (intent.resolveActivity(packageManager) != null) {
                 startActivityForResult(intent, 0x9988)
             }
-        }
-
-        toActivity.setOnClickListener {
-            val activityIntent = Intent(this, IntentTaskSecond::class.java)
-            startActivity(activityIntent)
         }
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         if (requestCode == 0x9988) {
-            Toast.makeText(this, "Sended", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "User set value: ${data?.extras?.getString(KEY)}", Toast.LENGTH_LONG).show();
         }
     }
 }
