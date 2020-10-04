@@ -1,8 +1,6 @@
 package com.example.testapplication
 
-import android.app.Activity
 import android.content.Intent
-import android.nfc.NfcAdapter.EXTRA_DATA
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
