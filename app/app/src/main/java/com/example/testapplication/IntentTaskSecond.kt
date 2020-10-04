@@ -17,7 +17,7 @@ class IntentTaskSecond : AppCompatActivity() {
 
         // why i can't take data from the implicit intent
         intentResult.text = intent.extras?.getString(Intent.EXTRA_TEXT) ?: "Default text"
-        buttonFirst.setOnClickListener {
+        buttonSecond.setOnClickListener {
             setUserResult(1)
         }
         buttonSecond.setOnClickListener {
