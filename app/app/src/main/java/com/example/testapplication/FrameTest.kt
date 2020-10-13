@@ -17,7 +17,7 @@ class FrameTest : AppCompatActivity() {
         setContentView(R.layout.activity_frame_test)
         val colors: Array<Int> = arrayOf(R.color.colorPrimary, R.color.colorAccent, R.color.anotherColor1, R.color.anotherColor2, R.color.anotherColor3)
         val imageViews: Array<View> = arrayOf(imageView1, imageView2, imageView3, imageView4, imageView5)
-        var selected = 2
+        var selected = 1;
         var transaction = supportFragmentManager.beginTransaction()
         transaction.add(R.id.fragmentContainer, MyFragment1().newInstance()).commit()
 
